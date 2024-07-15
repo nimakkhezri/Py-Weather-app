@@ -20,8 +20,28 @@ class Weather:
         main = data["main"]
         return main["temp"]
         
-    def get_celcius_temp(self) -> int:
+    def get_celsius_temp(self) -> int:
         kelvin = self.get_kelvin_temp()
+        celsius = kelvin - 273.15
+        return round(celsius)
+    
+    def get_max_kelvin_temp(self) -> float:
+        data = self.get_responce()
+        main = data["main"]
+        return main["temp_max"]
+    
+    def get_min_kelvin_temp(self) -> float:
+        data = self.get_responce()
+        main = data["main"]
+        return main["temp_min"]
+    
+    def get_min_celsius_temp(self) -> int:
+        kelvin = self.get_min_kelvin_temp()
+        celsius = kelvin - 273.15
+        return round(celsius)
+    
+    def get_max_celsius_temp(self) -> int:
+        kelvin = self.get_max_kelvin_temp()
         celsius = kelvin - 273.15
         return round(celsius)
     

@@ -57,3 +57,7 @@ class Weather:
     def get_wind_speed(self) -> float:
         data = self.get_responce()
         return data["wind"]["speed"]
+    
+    def get_country(self) -> str:
+        data = self.get_responce()
+        return data["sys"]["country"]

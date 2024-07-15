@@ -14,4 +14,3 @@ while True :
     print("\t\tMax temp: ", api.get_max_celsius_temp(), "Celsius")
     print("\t\tWind speed: ", api.get_wind_speed())
     print("\t\tPressure: ", api.get_pressure())
-    print("\t\t---------- WEATHER APP ----------")

@@ -65,3 +65,7 @@ class Weather:
     def get_city(self) -> str:
         data = self.get_responce()
         return data["name"]
+    
+    def get_pressure(self) -> int:
+        data = self.get_responce()
+        return data["main"]["pressure"]

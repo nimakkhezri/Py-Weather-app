@@ -24,6 +24,11 @@ class Weather:
         kelvin = self.get_kelvin_temp()
         celsius = kelvin - 273.15
         return round(celsius)
+    
+    def get_description(self) -> str:
+        data = self.get_responce()
+        description = data["weather"][0]["main"] + " : " + data["weather"][0]["description"]
+        return description
 
     def set_city(self, city) -> None :
         self.city = city

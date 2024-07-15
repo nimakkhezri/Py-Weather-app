@@ -53,3 +53,7 @@ class Weather:
     def set_city(self, city) -> None :
         self.city = city
         self.set_url()
+
+    def get_wind_speed(self) -> float:
+        data = self.get_responce()
+        return data["wind"]["speed"]

@@ -61,3 +61,7 @@ class Weather:
     def get_country(self) -> str:
         data = self.get_responce()
         return data["sys"]["country"]
+    
+    def get_city(self) -> str:
+        data = self.get_responce()
+        return data["name"]
